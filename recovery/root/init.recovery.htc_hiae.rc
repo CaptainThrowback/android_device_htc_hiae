@@ -1,0 +1,31 @@
+on init
+    # exfat
+    insmod /system/lib/modules/texfat.ko
+
+on boot
+    write /sys/devices/platform/android_usb/usb_function_switch 130
+    start chargeled
+
+on property:sys.usb.config=adb
+    write /sys/class/android_usb/android0/f_ffs/on 1
+    write /sys/class/android_usb/android0/f_adb/on 1
+    write /sys/devices/platform/android_usb/usb_function_switch 3
+    setprop sys.usb.state ${sys.usb.config}
+
+on property:sys.usb.config=mtp,adb
+    write /sys/devices/platform/android_usb/usb_function_switch 130
+    setprop sys.usb.state ${sys.usb.config}
+
+service choice_fn /sbin/choice_fn
+    seclabel u:r:choice_fn:s0
+    oneshot
+
+service detect_key /sbin/detect_key
+    disabled
+    seclabel u:r:healthd:s0
+    oneshot
+
+service offmode_charging /sbin/offmode_charging
+    disabled
+    seclabel u:r:healthd:s0
+

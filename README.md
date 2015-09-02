@@ -1,0 +1,144 @@
+TeamWin Recovery Project
+
+Device files for HTC One (A9)
+Codename: Hima_Aero (hiae)
+
+Builds with OmniROM android-5.1 tree
+
+cat proc/emmc:
+dev:        size     erasesize name
+mmcblk0p1: 00004000  00000200  "board_info"
+mmcblk0p2: 00400000  00000200  "pg1fs"
+mmcblk0p3: 00100000  00000200  "sbl1"
+mmcblk0p4: 00040000  00000200  "devcfg"
+mmcblk0p5: 00100000  00000200  "dip"
+mmcblk0p6: 009b7c00  00000200  "reserve_1"
+mmcblk0p7: 00040000  00000200  "mfg"
+mmcblk0p8: 017afc00  00000200  "pg2fs"
+mmcblk0p9: 00080000  00000200  "rpm"
+mmcblk0p10: 00200000  00000200  "tz"
+mmcblk0p11: 00200000  00000200  "hyp"
+mmcblk0p12: 00400000  00000200  "aboot"
+mmcblk0p13: 00a00000  00000200  "tool_diag"
+mmcblk0p14: 00a00000  00000200  "sp1"
+mmcblk0p15: 00008000  00000200  "ddr"
+mmcblk0p16: 00500000  00000200  "wcnss"
+mmcblk0p17: 00100000  00000200  "rfg_0"
+mmcblk0p18: 00100000  00000200  "rfg_1"
+mmcblk0p19: 00100000  00000200  "rfg_2"
+mmcblk0p20: 00100000  00000200  "rfg_3"
+mmcblk0p21: 00100000  00000200  "rfg_4"
+mmcblk0p22: 00180000  00000200  "fsg"
+mmcblk0p23: 03b00400  00000200  "radio"
+mmcblk0p24: 01400000  00000200  "adsp"
+mmcblk0p25: 01000000  00000200  "dsp"
+mmcblk0p26: 00000400  00000200  "limits"
+mmcblk0p27: 00107c00  00000200  "reserve_2"
+mmcblk0p28: 00100000  00000200  "misc"
+mmcblk0p29: 00180000  00000200  "modemst1"
+mmcblk0p30: 00180000  00000200  "modemst2"
+mmcblk0p31: 01400000  00000200  "fataldevlog"
+mmcblk0p32: 01e00000  00000200  "devlog"
+mmcblk0p33: 00040000  00000200  "pdata"
+mmcblk0p34: 00140400  00000200  "local"
+mmcblk0p35: 00004000  00000200  "control"
+mmcblk0p36: 00010000  00000200  "extra"
+mmcblk0p37: 00000400  00000200  "fsc"
+mmcblk0p38: 00002000  00000200  "ssd"
+mmcblk0p39: 00080000  00000200  "sensor_hub"
+mmcblk0p40: 02000000  00000200  "persist"
+mmcblk0p41: 00010000  00000200  "sec"
+mmcblk0p42: 00100000  00000200  "rfg_8"
+mmcblk0p43: 00080000  00000200  "frp"
+mmcblk0p44: 00a00000  00000200  "ramdump"
+mmcblk0p45: 00000400  00000200  "skylink"
+mmcblk0p46: 02d00000  00000200  "carrier"
+mmcblk0p47: 00a00000  00000200  "battery"
+mmcblk0p48: 00080000  00000200  "keystore"
+mmcblk0p49: 12200000  00000200  "apppreload"
+mmcblk0p50: 03c00000  00000200  "cota"
+mmcblk0p51: 00100000  00000200  "mota"
+mmcblk0p52: 00040000  00000200  "cmnlib32"
+mmcblk0p53: 00040000  00000200  "keymaster"
+mmcblk0p54: 00100000  00000200  "devinfo"
+mmcblk0p55: 00459400  00000200  "reserve"
+mmcblk0p56: 04000000  00000200  "hosd"
+mmcblk0p57: 02000000  00000200  "mdtp"
+mmcblk0p58: 10000000  00000200  "cache"
+mmcblk0p59: 04000000  00000200  "boot"
+mmcblk0p60: 04000000  00000200  "recovery"
+mmcblk0p61: e2000000  00000200  "system"
+mmcblk0p62: 1c000000  00000200  "userdata"
+
+cat proc/partitions:
+major minor  #blocks  name
+
+ 253        0     524288 zram0
+ 179        0   30535680 mmcblk0
+ 179        1         16 mmcblk0p1
+ 179        2       4096 mmcblk0p2
+ 179        3       1024 mmcblk0p3
+ 179        4        256 mmcblk0p4
+ 179        5       1024 mmcblk0p5
+ 179        6       9951 mmcblk0p6
+ 179        7        256 mmcblk0p7
+ 179        8      24255 mmcblk0p8
+ 179        9        512 mmcblk0p9
+ 179       10       2048 mmcblk0p10
+ 179       11       2048 mmcblk0p11
+ 179       12       4096 mmcblk0p12
+ 179       13      10240 mmcblk0p13
+ 179       14      10240 mmcblk0p14
+ 179       15         32 mmcblk0p15
+ 259        0       5120 mmcblk0p16
+ 259        1       1024 mmcblk0p17
+ 259        2       1024 mmcblk0p18
+ 259        3       1024 mmcblk0p19
+ 259        4       1024 mmcblk0p20
+ 259        5       1024 mmcblk0p21
+ 259        6       1536 mmcblk0p22
+ 259        7      60417 mmcblk0p23
+ 259        8      20480 mmcblk0p24
+ 259        9      16384 mmcblk0p25
+ 259       10          1 mmcblk0p26
+ 259       11       1055 mmcblk0p27
+ 259       12       1024 mmcblk0p28
+ 259       13       1536 mmcblk0p29
+ 259       14       1536 mmcblk0p30
+ 259       15      20480 mmcblk0p31
+ 259       16      30720 mmcblk0p32
+ 259       17        256 mmcblk0p33
+ 259       18       1281 mmcblk0p34
+ 259       19         16 mmcblk0p35
+ 259       20         64 mmcblk0p36
+ 259       21          1 mmcblk0p37
+ 259       22          8 mmcblk0p38
+ 259       23        512 mmcblk0p39
+ 259       24      32768 mmcblk0p40
+ 259       25         64 mmcblk0p41
+ 259       26       1024 mmcblk0p42
+ 259       27        512 mmcblk0p43
+ 259       28      10240 mmcblk0p44
+ 259       29          1 mmcblk0p45
+ 259       30      46080 mmcblk0p46
+ 259       31      10240 mmcblk0p47
+ 259       32        512 mmcblk0p48
+ 259       33     296960 mmcblk0p49
+ 259       34      61440 mmcblk0p50
+ 259       35       1024 mmcblk0p51
+ 259       36        256 mmcblk0p52
+ 259       37        256 mmcblk0p53
+ 259       38       1024 mmcblk0p54
+ 259       39       4453 mmcblk0p55
+ 259       40      65536 mmcblk0p56
+ 259       41      32768 mmcblk0p57
+ 259       42     262144 mmcblk0p58
+ 259       43      65536 mmcblk0p59
+ 259       44      65536 mmcblk0p60
+ 259       45    3702784 mmcblk0p61
+ 259       46   25624576 mmcblk0p62
+ 179       16       4096 mmcblk0rpmb
+ 179       32   31267840 mmcblk1
+ 179       33   31266816 mmcblk1p1
+ 254        0    3673592 dm-0
+ 254        1   25624576 dm-1
