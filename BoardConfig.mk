@@ -71,13 +71,13 @@ BOARD_RECOVERY_SWIPE := true
 BOARD_SUPPRESS_SECURE_ERASE := true
 BOARD_USES_MMCUTILS := true
 TARGET_PREBUILT_KERNEL := device/htc/hiae/recovery/kernel
-#TARGET_HW_DISK_ENCRYPTION := true
+TARGET_HW_DISK_ENCRYPTION := true
 #TARGET_USES_LOGD := true
 #TARGET_RECOVERY_DEVICE_MODULES := twrpdec
 #TW_RECOVERY_ADDITIONAL_RELINK_FILES := $(OUT)/recovery/root/sbin/twrpdec
 
 # Keymaster - Wait for qseecom to load
-#TARGET_KEYMASTER_WAIT_FOR_QSEE := true
+TARGET_KEYMASTER_WAIT_FOR_QSEE := true
 
 # TWRP Build Flags
 TW_THEME := portrait_hdpi
