@@ -1,11 +1,12 @@
-import /init.recovery.htc_decrypt.rc
+import /init.recovery.qcom_decrypt.rc
 
 on init
-    wait /dev/block/platform/soc.0/{ro.boot.bootdevice}
-    symlink /dev/block/platform/soc.0/{ro.boot.bootdevice} /dev/block/bootdevice
+    export LD_PRELOAD /sbin/liblog_htc_sbin.so
+    export LD_CONFIG_FILE /sbin/ld.config.txt
 
-    # exfat
-    insmod /system/lib/modules/texfat.ko
+on fs
+    wait /dev/block/platform/soc.0/${ro.boot.bootdevice}
+    symlink /dev/block/platform/soc.0/${ro.boot.bootdevice} /dev/block/bootdevice
 
 on boot
     start chargeled
